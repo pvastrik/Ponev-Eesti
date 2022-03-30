@@ -6,82 +6,149 @@
 
     <meta charset="utf-8">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title> Kabbala | Restoran </title>
-
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="reset.css"/>
+    <link rel="stylesheet" href="style.css"/>
 
 </head>
 
 <body>
-    <header>
-        <nav class="row">
-            <p><a href="#gallery-links">EstoniaTravel</a></p>
-            <div id='lingid' class="row">
-                <p><a href="#info"></a>a</p>
-                <p><a href="#info"></a>b`</p>
-                <p><a href="#info"></a>c</p>
-                <p><a href="#info"></a>d</p>
+<header>
+    <nav class="row">
+        <p><a href="index.html">EstoniaTravel</a></p>
+        <div id='lingid' class="row2">
+            <p><a href="#info"></a>a</p>
+            <p><a href="#info"></a>b`</p>
+            <p><a href="#info"></a>c</p>
+            <p><a href="#info"></a>d</p>
+        </div>
+    </nav>
+</header>
+<main>
+    <section class='' id="meist">
+        <div id="gallery" class="carousel slide" data-ride="carousel">
+
+            <ul class="carousel-indicators">
+                <li data-target="#gallery" data-slide-to="0" class="active"></li>
+                <li data-target="#gallery" data-slide-to="1"></li>
+                <li data-target="#gallery" data-slide-to="2"></li>
+            </ul>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/kokad.jpg" alt="Seebid">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>NEWS</h5>
+                        <p>loremlorem
+                            <button>dsapdlsa</button>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/kokad.jpg" alt="Meie">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/kokad.jpg" alt="Maja">
+                </div>
             </div>
-        </nav>
-    </header>
-    <main>
-        <section class='' id="meist">
-            <a href="#" class="gallery-image">
-                <div class="container"><img id='kokad' src="img/kokad.jpg" alt="kokad" />
+
+            <a class="carousel-control-prev" href="#gallery" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
             </a>
-            <h2 id="title"> Why estonia </h2>
-            <div class='meietekst'>
-                <p id="lorem"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                    ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum.</p>
+            <a class="carousel-control-next" href="#gallery" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
+        </div>
+        <h2 id="title"> Why estonia </h2>
+        <div class='meietekst'>
+            <p id="lorem"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                est laborum.</p>
+        </div>
+        <h2 id="Atraktsioonid" class="h2"> Atraktsioonid </h2>
+    </section>
+    <section class="gallery-links">
+        <a href="#" class="gallery-image">
+            <div class="container">
+                <img src="img/aura.jpg" alt="eesti">
+                <p class="post-header">AURA VEEKESKUS</p>
             </div>
-            <h2 id="Atraktsioonid" class="h2"> Atraktsioonid </h2>
-            <section id="pildid" class="">
-            </section>
-            </section>
-        </main>
+        </a>
+        <a href="#" class="gallery-image">
+            <div class="container">
+                <img src="img/parnu.jpg" alt="itaalia">
+                <p class="post-header">PÄRNU SPA</p>
+            </div>
+        </a>
+        <a href="#" class="gallery-image">
+            <div class="container">
+                <img src="img/vudila.jpg" alt="aasia">
+                <p class="post-header"> VUDILA</p>
+            </div>
+        </a>
+        <a href="#" class="gallery-image">
+            <div class="container">
+                <img src="img/vembu-tembu.jpg" alt="aasia">
+                <p class="post-header"> VEMBU-TEMBUMAA</p>
+            </div>
+        </a>
+    </section>
+
+</main>
 
 
+<footer>
+    <ul class="footer-links" id="info">
+        <li>
+            <p>Kontaktid</p>
+        </li>
+        <li>
+            <p>Kasulik info</p>
+        </li>
+        <li>
+            <p>Meist</p>
+        </li>
+    </ul>
 
-            <footer>
-                <ul class="footer-links" id="info">
-                    <li>
-                        <p>Kontaktid</p>
-                    </li>
-                    <li>
-                        <p>Kasulik info</p>
-                    </li>
-                    <li>
-                        <p>Meist</p>
-                    </li>
-                </ul>
+    <div class="disclaimer">
+        <p>Transtsendentaalne elamus - Gordon Ramsey<br>
+            <span>Äge - Nõia Ints</span> <br>Siit leidsin ma
+            tõelise rahu - Gandhi</p>
 
-                <div class="disclaimer">
-                    <p>Transtsendentaalne elamus - Gordon Ramsey<br>
-                         <span>Äge - Nõia Ints</span> <br>Siit leidsin ma
-                        tõelise rahu - Gandhi</p>
+    </div>
 
-                </div>
+    <div class="footer-sm">
 
-                <div class="footer-sm">
-
-                    <a href="#"><img src="img/reddit.png" alt="reddit" /></a>
-                    <a href="#"><img src="img/vimeo.png" alt="vimeo" /></a>
-
-
-                </div>
-
-            </footer>
+        <a href="#"><img src="img/reddit.png" alt="reddit"/></a>
+        <a href="#"><img src="img/vimeo.png" alt="vimeo"/></a>
 
 
+    </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </body>
 
 </html>
