@@ -63,6 +63,9 @@ main{
     margin-bottom : 20vh;
 }
 
+.gallery-links{
+    justify-content: center;
+}
 
 /* FOOTER */
 
@@ -71,7 +74,10 @@ footer {
     padding: 40px 40px;
     background-color: rgb(226,50,0);
     overflow: hidden;
-    
+    height: fit-content;
+    color:black;
+    font-size:20px;
+    font-weight: 700;
 }
 
 
