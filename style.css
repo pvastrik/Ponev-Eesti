@@ -7,7 +7,12 @@ body{
     background:white;
 }
 
-/* HEADER */
+.column{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+}
 .row{
 	display: flex;
 	flex-direction: row;
@@ -16,6 +21,8 @@ body{
 	align-items: stretch;
 	align-content: stretch;
 }
+/* HEADER */
+
 
 
 /* BODY */
@@ -26,7 +33,7 @@ main{
 
 #title{
     text-decoration: underline;
-
+    margin-bottom: 20px;
 }
 .meietekst{
     text-align: center;
@@ -45,7 +52,7 @@ main{
 /* FOOTER */
 
 footer {
-
+    margin-top: 10vh;
     padding: 40px 40px;
     background-color: rgb(226,50,0);
     overflow: hidden;
@@ -54,14 +61,13 @@ footer {
 
 
 .disclaimer {
-
-    display: none;
+    position:relative;
+    left: 30%;
     
 }
 
 footer ul {
 
-    width: fit-content;
     float: left;
     padding-left: 0px;
     
