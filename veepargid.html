@@ -8,10 +8,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title> Kabbala | Restoran </title>
+    <title> Põnev Eesti: Otsing</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="veepargidc.css" />
@@ -23,6 +24,13 @@
     <header>
         <nav class="row">
             <p><a href="index.html">EstoniaTravel</a></p>
+            <div class = 'search-box'>
+                <input id = "search-text" type="text" placeholder = "Search Anything">
+                <a onclick="giveHash();"  class = "search-btn">
+                    <i class="fas fa-search"></i>
+                </a>
+
+            </div>
             <div id='lingid' class="row2">
                 <p><a href="#info"></a>a</p>
                 <p><a href="#info"></a>b`</p>
@@ -110,10 +118,23 @@
                     <img src="img/parnu.jpg" alt="itaalia">
                     <p class="post-header">PÄRNU SPA</p>
                 </div>
+            </a>
                 <a href="#" class="gallery-image">
                     <div class="container">
                         <img src="img/vudila.jpg" alt="aasia">
                         <p class="post-header"> VUDILA</p>
+                    </div>
+                </a>
+                <a href="#" class="gallery-image">
+                    <div class="container">
+                        <img src="img/vembu-tembu.jpg" alt="aasia">
+                        <p class="post-header"> VEMBU-TEMBUMAA</p>
+                    </div>
+                </a>
+                <a href="#" class="gallery-image">
+                    <div class="container">
+                        <img src="img/vembu-tembu.jpg" alt="aasia">
+                        <p class="post-header"> VEMBU-TEMBUMAA</p>
                     </div>
                 </a>
                 <a href="#" class="gallery-image">
