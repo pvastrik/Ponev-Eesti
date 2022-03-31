@@ -1,15 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
 html {
     scroll-behavior: smooth;
+    font-family: Open sans-serif;
+
 }
 .gallery-image img {
     width: 100%;
+
 }
 body{
     background: white;
 }
 
+h5{
+    text-shadow : 1px 1px grey;
+}
+
+img {
+    object-fit: cover;
+}
 /*Search bar*/
 
 .search-box {
@@ -49,7 +58,7 @@ body{
 
 }
 .search-btn > i {
-    fontsize: 30px;
+    font-size: 30px;
 }
 
 #search-text {
@@ -136,12 +145,11 @@ main{
 footer {
     margin-top: 10vh;
     padding: 40px 40px;
-    background-color: rgb(226,50,0);
+    background-color:lightgray;
     overflow: hidden;
     height: fit-content;
     color:black;
     font-size:20px;
-    font-weight: 700;
     width:100%;
 }
 
@@ -168,8 +176,6 @@ footer ul li {
     
 footer ul li p {
     
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
     font-size: 18px;
     letter-spacing: 2px;
     color: #ffffff;
@@ -178,8 +184,6 @@ footer ul li p {
 }
     
 footer ul li a {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
     font-size: 18px;
     letter-spacing: 3px;
     color: #ffffff;
@@ -236,7 +240,6 @@ footer ul li a {
     padding: 0;
 }
 .post-header {
-    font-family: Open Sans Condensed, sans-serif;
     font-size: 20px;
     font-weight: 1000;
     letter-spacing: 3px;
