@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="et">
     <head>
         <meta charset="utf-8" />
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Põnev Eesti: Muuseumid</title>
+        <title>Põnev Eesti</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap"
+            rel="stylesheet"
+        />
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -22,7 +28,7 @@
         />
         <link rel="stylesheet" href="reset.css" />
         <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="otsingc.css" />
+        <link rel="stylesheet" href="indexc.css" />
     </head>
 
     <body>
@@ -67,58 +73,80 @@
 
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img id="mainimg" src="img/musemain.jpg" alt="puu" />
-                        </div>
-                    </div>
-                    <div class="dropdown-with-title">
-                        <h2 id="title">Muuseumid:</h2>
-                        <div class="dropdown-row">
-                            <div class="dropdown">
-                                <button
-                                    class="btn btn-secondary dropdown-toggle"
-                                    type="button"
-                                    id="dropdownMenuButton"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
-                                >
-                                    Asukoht
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" onclick="dropdownFilter('tartumaa')">Tartumaa</a>
-                                    <a class="dropdown-item" onclick="dropdownFilter('parnumaa')">Pärnumaa</a>
-                                    <a class="dropdown-item" onclick="dropdownFilter('harjumaa')">Harjumaa</a>
-                                    <a class="dropdown-item" onclick="dropdownFilter('läänevirumaa')">Lääne-Virumaa</a>
-                                    <a class="dropdown-item" onclick="dropdownFilter('idavirumaa')">Ida-Virumaa</a>
-                                    <a class="dropdown-item" onclick="dropdownFilter('jõgevamaa')">Jõgevamaa</a>
-                                    <a class="dropdown-item" onclick="dropdownFilter('põlvamaa')">Põlvamaa</a>
-                                    <a class="dropdown-item" onclick="dropdownFilter('järvamaa')">Järvamaa</a>
-                                    <a class="dropdown-item" onclick="dropdownFilter('võrumaa')">Võrumaa</a>
-                                </div>
+                            <img src="img/talvepuu.jpg" alt="puu" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Metsad</h5>
+                                <p>Eesti metsad on väga ilusad ja lahedad ja toredad</p>
+                                <button class="button-81" role="button">loe</button>
                             </div>
-                            <div class="dropdown">
-                                <button
-                                    class="btn btn-secondary dropdown-toggle"
-                                    type="button"
-                                    id="dropdownMenuButton"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
-                                >
-                                    Hind
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Kõik</a>
-                                    <a class="dropdown-item" href="#">€</a>
-                                    <a class="dropdown-item" href="#">€€</a>
-                                    <a class="dropdown-item" href="#">€€€</a>
-                                </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="img/veepark.jpg" alt="Meie" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Veepargid</h5>
+                                <p>Veepargitorud on väga kiired ja vesi väga soe</p>
+                                <button class="button-81" role="button">loe</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/tallinn.jpg" alt="Maja" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Tallinn</h5>
+                                <p>Tallinn on väga vana ja seal on väga palju maju</p>
+                                <button class="button-81" role="button">loe</button>
                             </div>
                         </div>
                     </div>
+
+                    <a class="carousel-control-prev" href="#gallery" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#gallery" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
                 </div>
+                <h2 id="title">Puhkus lastega</h2>
+                <div class="meietekst">
+                    <p id="lorem">
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                    </p>
+                </div>
+                <h2 id="Atraktsioonid" class="h2">Valige puhkuseviis</h2>
             </section>
-            <section class="gallery-links"></section>
+            <section class="gallery-links">
+                <a href="Veepargid.html" class="gallery-image">
+                    <div class="container" href="#veepargid.html">
+                        <img src="img/aura.jpg" alt="aura" />
+                        <p class="post-header">VEEKESKUSED</p>
+                    </div>
+                </a>
+                <a href="Veepargid.html" class="gallery-image">
+                    <div class="container">
+                        <img src="img/coaster.jpg" alt="vembu" />
+                        <p class="post-header">ATRAKTSIOONID</p>
+                    </div>
+                </a>
+                <a href="Muuseumid.html" class="gallery-image">
+                    <div class="container">
+                        <img src="img/muuseum.jpg" alt="parnu" />
+                        <p class="post-header">MUUSEUMID</p>
+                    </div>
+                </a>
+                <a href="#" class="gallery-image">
+                    <div class="container">
+                        <img src="img/zoo.jpg" alt="loomaaed" />
+                        <p class="post-header">Loomaajad</p>
+                    </div>
+                </a>
+                <a href="looduspuhkus.html" class="gallery-image">
+                    <div class="container">
+                        <img src="img/nature.jpg" alt="vudila" />
+                        <p class="post-header">LOODUSPUHKUS</p>
+                    </div>
+                </a>
+            </section>
         </main>
         <footer>
             <div class="row">
