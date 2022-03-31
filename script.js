@@ -15,24 +15,85 @@ var places = [
     {
         "name": "vudila", // hiljem pannakse uppercase
         "image": "vudila", // ilma jpg-ta
+        "location": "tartumaa",
+        "cat": "veepark vesi "
     },
     {
         "name": "pärnu spa",
         "image": "parnu",
+        "location": "parnumaa",
+        "cat": "veepark vesi "
     },
     {
         "name": "aura veekeskus",
         "image": "aura",
+        "location": "tartumaa",
+        "cat": "veepark vesi "
     },
     {
         "name": "vembu-tembumaa",
         "image": "vembu-tembu",
-        "alt": "vembu tembumaa"
+        "location": "harjumaa",
+        "alt": "vembu tembumaa",
+        "cat": "veepark vesi "
     },
+    {
+        "name": "kumu",
+        "image": "kumu",
+        "location": "harjumaa",
+        "alt": "muuseum kunsti eesti"
+    },
+    {
+        "name": "erm",
+        "image": "erm",
+        "location": "tartumaa",
+        "alt": "eesti rahva muuseum"
+    },
+    {
+        "name": "mänguasja-muuseum",
+        "image": "manguasja",
+        "location": "tartumaa",
+        "alt": "mänguasja muuseum"
+    },
+    {
+        "name": "spordi-muuseum",
+        "image": "spordi",
+        "location": "tartumaa"
+    },
+    {
+        "name": "taevaskoja",
+        "image": "taevaskoja",
+        "location": "põlvamaa",
+        "alt": "liivakivi paljand",
+        "cat": "loodus"
+    },
+    {
+        "name": "peipsi järv",
+        "image": "peipsi",
+        "location": "tartumaa jõgevamaa idavirumaa põlvamaa",
+        "alt": "liivakivi paljand",
+        "cat": "loodus"
+    },
+    {
+        "name": "endla loodus-kaitseala",
+        "image": "endla",
+        "location": "järvamaa jõgevamaa läänevirumaa",
+        "alt": "soomatk metsamaja matkarada puhkekoht",
+        "cat": "loodus"
+    },
+    {
+        "name": "meremõisa",
+        "image": "meremoisa",
+        "location": "harjumaa",
+        "alt": "rand vesi vee",
+        "cat": "loodus"
+    },
+
 ]
 // veeparkide lehe laadimisel kontrollib hashi
 window.onload = function() {
-    if(location.pathname.match("otsing.html")) {
+    var leht = location.pathname;
+    if(leht.match("otsing.html")) {
         if (window.location.hash === "") {
             render(places);
         } else {
@@ -41,6 +102,12 @@ window.onload = function() {
             searchPlaces(hashValue);
 
         }
+    }else if (leht.match("Muuseumid.html")) {
+        searchPlaces("muuseum");
+    }else if (leht.match("Veepargid.html")) {
+        searchPlaces("veepark");
+    }else if (leht.match("looduspuhkus.html")) {
+        searchPlaces("loodus");
     }
 }
 // laeb veeparkide lehe koos hashiga
@@ -58,38 +125,70 @@ function searchPlaces(input) {
         return token.trim() !== '';
     });
     if(tokens.length) {
-        var searchRegex = new RegExp(tokens.join("|", 'gim'));
-        var filteredList = places.filter(function(place) {
-            var placeString = '';
-            for (var key in place) {
-                if(place.hasOwnProperty(key) && place[key] !== '') {
-                    placeString += place[key].toString().toLowerCase().trim() + ' ';
-                }
-            }
-            return placeString.match(searchRegex);
-        });
+        filteredList = filterList(places, tokens);
         render(filteredList);
         document.querySelector("#title").scrollIntoView();
     }
 }
+function filterList(list, tokens) {
+    var searchRegex = new RegExp(tokens.join("|", 'gim'));
+    var filteredList = list.filter(function(place) {
+        var placeString = '';
+        for (var key in place) {
+            if(place.hasOwnProperty(key) && place[key] !== '') {
+                placeString += place[key].toString().toLowerCase().trim() + ' ';
+            }
+        }
+        return placeString.match(searchRegex);
+    });
+    return filteredList;
+}
+
+function dropdownFilter(input) {
+    var hashValue = window.location.hash.substring(1);
+    var tokens = hashValue.split("%20");
+    var inputs = input.split(" ");
+    var filteredList;
+    var leht = window.location.toString().split("/");
+    leht = leht[leht.length-1];
+    if(tokens.length) {
+        filteredList = filterList(places, tokens);
+    }
+    filteredList = filterList(filteredList, inputs);
+    if (leht.match("Muuseumid.html")) {
+        filteredList = filterList(filteredList, "muuseum".split(" "));
+    }else if (leht.match("Veepargid.html")) {
+        filteredList = filterList(filteredList, "veepark".split(" "));
+    }else if (leht.match("looduspuhkus.html")) {
+        filteredList = filterList(filteredList, "loodus".split(" "));
+    }
+
+    render(filteredList);
+    document.querySelector("#title").scrollIntoView();
+
+}
+
+
 // lisab piltide divi antud objektide pildid
 
 function render(data) {
     var div = document.querySelector(".gallery-links");
+    var divHTMLString = "<h2 class='noresult'>Kahjuks selliseid kohti meie lehel ei leidu.</h2>"
 
-    var divHTMLString = data.map(function(place) {
-        var image = "img/" + place.image +".jpg";
-        var name = place.name.toUpperCase()
-        return `<a href="#" class="gallery-image">
+    if(data.length!==0) {
+        divHTMLString = data.map(function (place) {
+            var image = "img/" + place.image + ".jpg";
+            var name = place.name.toUpperCase()
+            return `<a href="#" class="gallery-image">
                 <div class="container">
-                    <img src=` + image + " alt="+place.name + `>
+                    <img src=` + image + " alt=" + place.name + `>
                     <p class="post-header">` + name + `</p>
                 </div>
             </a>`;
-    }).join('');
-
+        }).join('');
+    }
     div.innerHTML = divHTMLString;
-    };
+    }
 
 // võimalik viis kohtade tekstide suuruse muutmiseks vastavalt pikkusele (ei saanud tööle prg)
 // const input = document.querySelector('input');

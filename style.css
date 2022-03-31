@@ -93,6 +93,11 @@ img {
     color:black;
 }
 
+.noresult {
+    font-size: 40px;
+    font-weight: 400;
+}
+
 .column{
 	display: flex;
 	flex-direction: column;
@@ -292,6 +297,9 @@ footer ul li a {
     justify-content: center;
     width: fit-content;
     max-width: 100%;
+}
+.dropdown-item {
+    cursor:pointer;
 }
 @media only screen and (min-width: 645px) {
     #title {
