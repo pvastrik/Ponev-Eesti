@@ -1,7 +1,9 @@
+
 #title{
     font-size:50px;
     font-weight: 1000;
     text-decoration: none;
+    font-family: Open sans-serif;
 
 }
 /*karusselli asjad */
@@ -31,7 +33,6 @@ h5{
     color: #0d172a;
     cursor: pointer;
     display: inline-block;
-    font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     font-size: 1.1rem;
     font-weight: 600;
     line-height: 1;
@@ -49,6 +50,13 @@ h5{
     background-color: #1e293b;
     color: #fff;
 }
+
+.dropdown-with-title{
+    margin-top:20px;
+    padding: 10px;
+}
+
+
 
 @media (min-width: 768px) {
     .button-81 {

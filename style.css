@@ -10,6 +10,8 @@ html {
 }
 body{
     background: white;
+    font-family: Open sans-serif;
+
 }
 
 h5{
@@ -80,7 +82,10 @@ img {
     /*   width: 250px; */
 
 
-
+}
+#dropdownMenuButton { 
+    background-color: rgba(255, 255, 255, 0.5);
+    color:black;
 }
 
 .column{
@@ -141,11 +146,15 @@ main{
 
 .gallery-links{
     justify-content: center;
+    margin-top:10px;
+    border-top: 5px solid black;
 }
+
 
 /* FOOTER */
 
 footer {
+    border-top:4px solid black;
     margin-top: 10vh;
     padding: 40px 40px;
     background-color:lightgray;

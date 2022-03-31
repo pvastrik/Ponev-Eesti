@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="et">
+<html>
 
 <head>
 
@@ -8,17 +8,16 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title> Põnev Eesti </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <title> Põnev Eesti: Muuseumid</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="indexc.css" />
+    <link rel="stylesheet" href="otsingc.css" />
+
+
 
 </head>
 
@@ -28,9 +27,10 @@
             <p><a href="index.html">EstoniaTravel</a></p>
             <div class = 'search-box'>
                 <input id = "search-text" type="text" placeholder = "Search Anything">
-                <a onclick="giveHash();" class = "search-btn">
+                <a onclick="giveHash();"  class = "search-btn">
                     <i class="fas fa-search"></i>
                 </a>
+
             </div>
             <div id='lingid' class="row2">
                 <p><a href="#info"></a>a</p>
@@ -60,7 +60,7 @@
                             <button class="button-81" role="button">loe</button>
                         </div>
                     </div>
-                
+
                     <div class="carousel-item">
                         <img src="img/veepark.jpg" alt="Meie">
                         <div class="carousel-caption d-none d-md-block">
@@ -88,43 +88,58 @@
                     <span class="carousel-control-next-icon"></span>
                 </a>
 
-            </div >
-            <h2 id="title"> Why estonia </h2>
-            <div class='meietekst'>
-                <p id="lorem"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                    ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum.</p>
             </div>
-            <h2 id="Atraktsioonid" class="h2"> Atraktsioonid </h2>
+            <div class="dropdown-with-title">
+                <h2 id="title"> Looduspuhkus: </h2>
+                <div class = "dropdown-row">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Asukoht
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item active" href="#">Kõik</a>
+                        <a class="dropdown-item" href="#">Tallinn</a>
+                        <a class="dropdown-item" href="#">Tartu</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Hind
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Kõik</a>
+                        <a class="dropdown-item" href="#">€</a>
+                        <a class="dropdown-item" href="#">€€</a>
+                        <a class="dropdown-item" href="#">€€€</a>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            
         </section>
         <section class="gallery-links">
             <a href="otsing.html" class="gallery-image">
                 <div class="container" href="#veepargid.html">
-                    <img src="img/aura.jpg" alt="aura">
-                    <p class="post-header">VEEKESKUSED</p>
+                    <img src="img/taevaskoja.jpg" alt="aura">
+                    <p class="post-header">TAEVASKOJA</p>
                 </div>
             </a>
             <a href="#" class="gallery-image">
                 <div class="container">
-                    <img src="img/parnu.jpg" alt="parnu">
-                    <p class="post-header">PÄRNU SPA</p>
+                    <img src="img/peipsi.jpg" alt="parnu">
+                    <p class="post-header">PEIPSI</p>
                 </div>
             </a>
                 <a href="#" class="gallery-image">
                     <div class="container">
-                        <img src="img/vudila.jpg" alt="vudila">
-                        <p class="post-header"> VUDILA</p>
+                        <img src="img/endla.jpg" alt="vudila">
+                        <p class="post-header"> ENDLA</p>
                     </div>
                 </a>
                 <a href="#" class="gallery-image">
                     <div class="container">
-                        <img src="img/vembu-tembu.jpg" alt="vembu">
-                        <p class="post-header"> VEMBU-TEMBUMAA</p>
+                        <img src="img/meremoisa.jpg" alt="vembu">
+                        <p class="post-header"> MEREMÕISA</p>
                     </div>
                 </a>
         </section>
