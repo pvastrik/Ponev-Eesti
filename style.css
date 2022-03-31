@@ -38,9 +38,11 @@ img {
 .search-box:hover > .search-btn{
     background: white;
     color: black;
-
 }
 
+.search-box:hover > .search-btn > i{
+    color:black;
+}
 .search-btn {
     color: white;
     float: right;
@@ -58,7 +60,8 @@ img {
 
 }
 .search-btn > i {
-    font-size: 30px;
+    font-size: 20px;
+    color: white;
 }
 
 #search-text {

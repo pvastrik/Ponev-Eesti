@@ -32,7 +32,7 @@ var places = [
 ]
 // veeparkide lehe laadimisel kontrollib hashi
 window.onload = function() {
-    if(location.pathname.match("veepargid.html")) {
+    if(location.pathname.match("otsing.html")) {
         if (window.location.hash === "") {
             render(places);
         } else {
@@ -46,7 +46,7 @@ window.onload = function() {
 // laeb veeparkide lehe koos hashiga
 function giveHash(event) {
     var hash = document.getElementById("search-text").value;
-    window.location = "veepargid.html#" + hash;
+    window.location = "otsing.html#" + hash;
     searchPlaces(hash);
 
 }
