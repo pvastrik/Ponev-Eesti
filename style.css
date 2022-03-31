@@ -89,7 +89,7 @@ img {
 .row{
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: stretch;
 	align-content: stretch;
@@ -133,7 +133,7 @@ main{
     left:10%;
     text-align: center;
     width:80%;
-    margin-bottom : 20vh;
+    margin-bottom: 2%
 }
 
 .gallery-links{
@@ -251,6 +251,34 @@ footer ul li a {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+
+.dropdown-row {
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+}
+@media only screen and (min-width: 645px) {
+    #title {
+        float:left;
+        justify-content:left;
+        padding-left: 30px;
+    }
+    .dropdown-row {
+        float: right;
+        justify-content: flex-end;
+        margin-right:30px;
+
+    }
+    .dropdown-with-title{
+        display:flex;
+        width:100vw;
+        justify-content: space-between;
+    }
+
 }
 
 @media only screen and (min-width: 720px) {
