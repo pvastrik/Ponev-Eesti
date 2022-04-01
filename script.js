@@ -91,7 +91,7 @@ var places = [
 ];
 // veeparkide lehe laadimisel kontrollib hashi
 window.onload = function () {
-    var leht = location.pathname;
+    var leht = location.pathname.toString().toLowerCase();
     if (leht.match("otsing.html")) {
         if (window.location.hash === "") {
             render(places);
@@ -100,9 +100,9 @@ window.onload = function () {
             hashValue = hashValue.replaceAll("%20", " ");
             searchPlaces(hashValue);
         }
-    } else if (leht.match("Muuseumid.html")) {
+    } else if (leht.match("muuseumid.html")) {
         searchPlaces("muuseum");
-    } else if (leht.match("Veepargid.html")) {
+    } else if (leht.match("veepargid.html")) {
         searchPlaces("veepark");
     } else if (leht.match("looduspuhkus.html")) {
         searchPlaces("loodus");
